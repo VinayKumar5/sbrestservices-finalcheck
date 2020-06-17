@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:context="http://www.springframework.org/schema/context" 
+ xmlns:p="http://www.springframework.org/schema/p" 
+ xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<bean class="com.cognizant.moviecruiser.model.Movie" id="endgame">
+	<property value="2" name="id"/>
+	<property value="End Game" name="title"/>
+	<property value="280" name="boxOffice"/>
+	<property value="true" name="active"/>
+	<property value="25/08/2017" name="dateOfLaunch"/>
+	<property name="genre">
+	<list>
+	<value>Action</value>
+	<value>Thriller</value>
+	<value>Adventure</value>
+	</list>
+	</property>	
+</bean>
+
+
+<bean class="com.cognizant.moviecruiser.model.Movie" id="infinitywars">
+	<property value="1" name="id"/>
+	<property value="Infinity Wars" name="title"/>
+	<property value="199" name="boxOffice"/>
+	<property value="true" name="active"/>
+	<property value="18/02/2017" name="dateOfLaunch"/>
+	<property name="genre">
+	<list>
+	<value>Action</value>
+	<value>Thriller</value>
+	<value>Adventure</value>
+	</list>
+	</property>
+</bean>
+
+<bean class="com.cognizant.moviecruiser.model.Movie" id="blackpanther">
+	<property value="3" name="id"/>
+	<property value="Black Panther" name="title"/>
+	<property value="100" name="boxOffice"/>
+	<property value="false" name="active"/>
+	<property value="18/09/2019" name="dateOfLaunch"/>
+	<property name="genre">
+	<list>
+	<value>Action</value>
+	<value>Thriller</value>
+	<value>Adventure</value>
+	</list>
+	</property>
+</bean>
+
+
+<bean class="com.cognizant.moviecruiser.model.Movie" id="captainmarvel">
+	<property value="4" name="id"/>
+	<property value="Captain Marvel" name="title"/>
+	<property value="110" name="boxOffice"/>
+	<property value="false" name="active"/>
+	<property value="28/02/2019" name="dateOfLaunch"/>
+	<property name="genre">
+	<list>
+	<value>Action</value>
+	<value>Thriller</value>
+	<value>Adventure</value>
+	</list>
+	</property>
+</bean>
+
+<bean class="com.cognizant.moviecruiser.model.Movie" id="futuremovie">
+	<property value="6" name="id"/>
+	<property value="Future Movie" name="title"/>
+	<property value="100" name="boxOffice"/>
+	<property value="true" name="active"/>
+	<property value="18/09/2022" name="dateOfLaunch"/>
+	<property name="genre">
+	<list>
+	<value>Action</value>
+	<value>Thriller</value>
+	<value>Adventure</value>
+	</list>
+	</property>
+</bean>
+
+
+<bean class="java.util.ArrayList" id="movieList">
+	<constructor-arg>
+	<list>
+	<ref bean="infinitywars"/>
+	<ref bean="endgame"/>
+	<ref bean="blackpanther"/>
+	<ref bean="captainmarvel"/>
+	<ref bean="futuremovie"/>
+	</list>
+	</constructor-arg>
+</bean>
+
+
+</beans>
